@@ -7,19 +7,71 @@
     <script>
         window.addEventListener("load", () => {
             console.log("loaded via javascript");
-            //TODO: add any extra onload processing you may need here
+            getCurrentSelection();
+            Element.addEventListener("click", function(){alert("Hello");});
         });
+
+
         function getCurrentSelection() {
             setTimeout(() => {
                 //added this delay here as some solutions may require it to update properly (i.e., click code may complete before the navigation changes)
                 //TODO: add code for processing the current selection 
+                //document.getElementById("h1").innerHTML = "";
+                updateCurrentPage('');
 
                 //Note: likely you'll want to call updateCurrentPage towards the end
             }, 100);
         }
     </script>
     <style>
-        /* TODO: make edits here */
+        nav{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;   
+        }
+
+        ul::first-letter{
+            text-transform: capitalize;
+        }
+
+        li a::first-letter{
+            text-transform: capitalize;
+        }
+
+       
+        li a {
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            
+        }
+
+        li {
+            float: left;
+            font-size: 15px;
+	        font-weight: 700;
+	        text-align: left;
+	        margin: 0;
+	        color: #333;
+	        text-align: center
+        }
+        li::before{
+            content: '✓';
+        }
+
+        li a:hover {
+            background-color: #111;
+            
+        }
     </style>
     <!-- make the necessary edits above this line -->
 
