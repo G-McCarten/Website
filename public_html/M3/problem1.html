@@ -7,65 +7,78 @@
     <script>
         window.addEventListener("load", () => {
             console.log("loaded via javascript");
-            getCurrentSelection();
-            Element.addEventListener("click", function(){alert("Hello");});
+            arefs = document.getElementsByTagName('a');
+                for (let aref of arefs){
+                    aref.addEventListener("click", function(){
+                        updateCurrentPage(aref.textContent);
+                        
+                    })
+                }
         });
 
 
-        function getCurrentSelection() {
+        function getCurrentSelection(text) {
             setTimeout(() => {
                 //added this delay here as some solutions may require it to update properly (i.e., click code may complete before the navigation changes)
                 //TODO: add code for processing the current selection 
-                //document.getElementById("h1").innerHTML = "";
-                updateCurrentPage('');
+                //updateCurrentPage(text);
+                
+                
 
                 //Note: likely you'll want to call updateCurrentPage towards the end
             }, 100);
         }
     </script>
     <style>
-        nav{
-            list-style-type: none;
+        nav {
+            background-color: #333;
+            
+        }
+        nav > ul{
+            list-style-type: none;    
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: #333;
+             
         }
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;   
-        }
-
-        ul::first-letter{
-            text-transform: capitalize;
-        }
-
-        li a::first-letter{
-            text-transform: capitalize;
-        }
-
-       
-        li a {
-            display: block;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            
-        }
-
         li {
+            float: left;      
+        }
+      
+        li a {
+             border-right: 1px solid #bbb;
+             color: white;
+             padding: 14px 16px; 
+             display: block;
+             text-align: center;
+             text-decoration: none;   
+        }
+
+        h1::first-letter{
+            text-transform: capitalize;
+        }
+
+        li > a::first-letter{
+            text-transform: capitalize;
+        }
+
+        ul li{
             float: left;
+            font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
             font-size: 15px;
 	        font-weight: 700;
 	        text-align: left;
 	        margin: 0;
 	        color: #333;
-	        text-align: center
+            list-style-type: none;
         }
-        li::before{
-            content: '✓';
+
+        ul li::before{
+            content: '✓ ';
+            color: green;
+        }
+        nav ul li::before{
+            content: '';
         }
 
         li a:hover {
