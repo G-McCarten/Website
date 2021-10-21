@@ -6,8 +6,8 @@ Your Name: Gerald McCarten
 
 Milestone Features:
 	Milestone 1:
-[] User will be able to register a new account
-[] Form Fields
+User will be able to register a new account
+Form Fields
 Username, email, password, confirm password(other fields optional)
 Email is required and must be validated
 Username is required
