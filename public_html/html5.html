@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <canvas id="canvas" width="600" height="400" tabindex="1"></canvas>
-
-
-  <style>
+<style>
 #canvas {
   width: 600px;
   height: 400px;
   border: 1px solid black;
 }
 </style>
+</head>
+<body>
+
+<canvas id="canvas" width="600" height="400" tabindex="1"></canvas>
 
 <script>
 // Arcade Shooter game
@@ -188,7 +189,7 @@ function draw() {
     ship.y -= ship.s;
   }
   // Don't go out of bounds
-  if (ship.y <script ) {
+  if (ship.y < 0) {
     ship.y = 0;
   }
   if (ship.y > canvas.height - ship.l) {
@@ -242,5 +243,5 @@ function draw() {
 menu();
 canvas.focus();
 </script>
-</head>
+</body>
 </html>
