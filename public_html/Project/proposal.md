@@ -41,15 +41,17 @@ Milestone Features:
 	-  Email should be unique
       - Screenshot #6: ![Screenshot_14](https://user-images.githubusercontent.com/76708068/141401966-f0327510-c1a9-420a-9234-b3fb5834129e.png)
 	- Username should be unique
-     - Screenshot #2: ![Screenshot_10](https://user-images.githubusercontent.com/76708068/141400820-fa5008f1-b191-43eb-a8c0-1a29e5721ef8.png) 
-	- Username is requiredConfirm password’s match
-![Screenshot_12](https://user-images.githubusercontent.com/76708068/141401319-43ad11df-9db5-4628-8072-3da6c10b0c03.png)
+      - Screenshot #7: ![Screenshot_10](https://user-images.githubusercontent.com/76708068/141400820-fa5008f1-b191-43eb-a8c0-1a29e5721ef8.png) 
+	- Username is required
+      - Screenshot #8: ![Screenshot_12](https://user-images.githubusercontent.com/76708068/141401319-43ad11df-9db5-4628-8072-3da6c10b0c03.png)
+	-Confirm password’s match
+	
 	[ ] \(mm/dd/yyyy of completion) User will be able to login to their account (given they enter the correct credentials)
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://gm348-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - https://github.com/G-McCarten/IT202-005/pull/26
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
@@ -60,8 +62,21 @@ Milestone Features:
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1: ![Screenshot_5](https://user-images.githubusercontent.com/76708068/141404891-9b3e5a19-4fc9-4fa3-8e2c-499243fedc3b.png)
+      - Screenshot #2: ![Screenshot_7](https://user-images.githubusercontent.com/76708068/141404909-bea59dd7-42a6-4ed4-9b8c-f82b22fd7a88.png)
+      - Screenshot #3: ![Screenshot_6](https://user-images.githubusercontent.com/76708068/141404914-c0be54ae-a779-4842-97b2-9cfa607afd48.png)
+      	- User can login with email or username
+      - Screenshot #4: ![Screenshot_8](https://user-images.githubusercontent.com/76708068/141405006-3d9f6190-dcc7-433b-a95d-ee1dde499a0d.png)
+      - Password is required
+      - Screenshot #5: ![Screenshot_9](https://user-images.githubusercontent.com/76708068/141405026-02eaadfe-7674-468d-bdc2-10955d130e8b.png)
+	- Logging in should fetch the user’s details (and roles) and save them into the session. This can be home, profile, a dashboard, etc.
+      - Screenshot #6: ![Screenshot_6](https://user-images.githubusercontent.com/76708068/141405054-0713a524-0fd5-435d-b268-933f8a322c4b.png)
+	- User will be directed to a landing page upon login
+      - Screenshot #7: ![Screenshot_10](https://user-images.githubusercontent.com/76708068/141405113-6e37af8b-f9bc-42cc-b391-f9263f040723.png)
+      	-This is a protected page (non-logged in users shouldn’t have access). (Typing home.php in url before pressing enter)
+      - Screenshot #8: ![Screenshot_11](https://user-images.githubusercontent.com/76708068/141405115-5d5d4555-68e1-4e89-8fc5-7f371972e663.png)
+      	- (After pressing enter)
+
 	[ ] \(mm/dd/yyyy of completion) Basic security rules implemented
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
