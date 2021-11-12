@@ -53,15 +53,6 @@ Milestone Features:
     - Pull Requests
       - https://github.com/G-McCarten/IT202-005/pull/26
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-	[ ] \(mm/dd/yyyy of completion) User will be able to logout
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-    - Pull Requests
-      - PR link #1 (repeat as necessary)
-    - Screenshots
       - Screenshot #1: ![Screenshot_5](https://user-images.githubusercontent.com/76708068/141404891-9b3e5a19-4fc9-4fa3-8e2c-499243fedc3b.png)
       - Screenshot #2: ![Screenshot_7](https://user-images.githubusercontent.com/76708068/141404909-bea59dd7-42a6-4ed4-9b8c-f82b22fd7a88.png)
       - Screenshot #3: ![Screenshot_6](https://user-images.githubusercontent.com/76708068/141404914-c0be54ae-a779-4842-97b2-9cfa607afd48.png)
@@ -76,7 +67,17 @@ Milestone Features:
       	-This is a protected page (non-logged in users shouldn’t have access). (Typing home.php in url before pressing enter)
       - Screenshot #8: ![Screenshot_11](https://user-images.githubusercontent.com/76708068/141405115-5d5d4555-68e1-4e89-8fc5-7f371972e663.png)
       	- (After pressing enter)
-
+	[ ] \(mm/dd/yyyy of completion) User will be able to logout
+  -  List of Evidence of Feature Completion
+    - Status: Pending Completed
+    - Direct Link: https://gm348-prod.herokuapp.com/Project/logout.php
+    - Pull Requests
+      - PR link #1 https://github.com/G-McCarten/IT202-005/pull/28
+    - Screenshots
+      - Screenshot #1: ![Screenshot_14](https://user-images.githubusercontent.com/76708068/141405536-1ac287d8-621f-4939-a8de-30febb9c71c6.png)
+   	- Logging out will redirect to login page
+   	- User should see a message that they’ve successfully logged out
+   	- Session should be destroyed (so the back button doesn’t allow them access back in)
 	[ ] \(mm/dd/yyyy of completion) Basic security rules implemented
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
