@@ -22,7 +22,7 @@ Your Name: Gerald McCarten
 
 Milestone Features:
 	Milestone 1:
-	[ ] \(mm/dd/yyyy of completion) User will be able to register a new account
+	[11/10/2021] \(mm/dd/yyyy of completion) User will be able to register a new account
   -  List of Evidence of Feature Completion
     - Status: Partiallly Working
     - Direct Link: https://gm348-prod.herokuapp.com/Project/register.php
@@ -46,7 +46,7 @@ Milestone Features:
       - Screenshot #8: ![Screenshot_12](https://user-images.githubusercontent.com/76708068/141401319-43ad11df-9db5-4628-8072-3da6c10b0c03.png)
 	-Confirm password’s match
 	
-	[ ] \(mm/dd/yyyy of completion) User will be able to login to their account (given they enter the correct credentials)
+	[11/10/2021] \(mm/dd/yyyy of completion) User will be able to login to their account (given they enter the correct credentials)
   -  List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: https://gm348-prod.herokuapp.com/Project/login.php
@@ -67,9 +67,9 @@ Milestone Features:
       	-This is a protected page (non-logged in users shouldn’t have access). (Typing home.php in url before pressing enter)
       - Screenshot #8: ![Screenshot_11](https://user-images.githubusercontent.com/76708068/141405115-5d5d4555-68e1-4e89-8fc5-7f371972e663.png)
       	- (After pressing enter)
-	[ ] \(mm/dd/yyyy of completion) User will be able to logout
+	[11/10/2021] \(mm/dd/yyyy of completion) User will be able to logout
   -  List of Evidence of Feature Completion
-    - Status: Pending Completed
+    - Status: Completed
     - Direct Link: https://gm348-prod.herokuapp.com/Project/logout.php
     - Pull Requests
       - PR link #1 https://github.com/G-McCarten/IT202-005/pull/28
@@ -78,9 +78,9 @@ Milestone Features:
    	- Logging out will redirect to login page
    	- User should see a message that they’ve successfully logged out
    	- Session should be destroyed (so the back button doesn’t allow them access back in)
-	[ ] \(mm/dd/yyyy of completion) Basic security rules implemented
+	[11/10/2021] \(mm/dd/yyyy of completion) Basic security rules implemented
   -  List of Evidence of Feature Completion
-    - Status: Pending Completed
+    - Status: Completed
     - Direct Link: https://gm348-prod.herokuapp.com/Project/login.php
     - Pull Requests
       - https://github.com/G-McCarten/IT202-005/pull/29
@@ -88,7 +88,7 @@ Milestone Features:
 	- Function to check if user is logged 
     - Screenshot #2: ![Screenshot_17](https://user-images.githubusercontent.com/76708068/141405884-b7e81129-6eb4-4d3f-bf03-c65542c69953.png)
 	- Function should be called on appropriate pages that only allow logged in user. In home.php:
-	[ ] \(mm/dd/yyyy of completion) Basic Roles implemented
+	[11/10/2021] \(mm/dd/yyyy of completion) Basic Roles implemented
   -  List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: https://gm348-prod.herokuapp.com/Project/login.php
@@ -99,18 +99,17 @@ Milestone Features:
     - Screenshot #2: ![Screenshot_16](https://user-images.githubusercontent.com/76708068/141406414-e7e9e439-1384-4110-b78c-9f00b916ed19.png)
 	- Have a User Roles table (id, user_id, role_id, is_active, created, modified
     - Screenshot #3: ![Screenshot_18](https://user-images.githubusercontent.com/76708068/141406543-db318eda-4e76-4b21-90ca-5df87fcb1d6d.png)
-	[ ] \(mm/dd/yyyy of completion) Site should have basic styles/theme applied; everything should be styled
+	[11/10/2021] \(mm/dd/yyyy of completion) Site should have basic styles/theme applied; everything should be styled
   -  List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: https://gm348-prod.herokuapp.com/Project/login.php
     - Pull Requests
       - https://github.com/G-McCarten/IT202-005/pull/32
     - Screenshot #1: ![Screenshot_18](https://user-images.githubusercontent.com/76708068/141408006-9644b2f7-4423-4b8c-8712-42877b063446.png)
-	- Have a Roles table (id, name, description, is_active, modified, created
     - Screenshot #2: ![Screenshot_19](https://user-images.githubusercontent.com/76708068/141408017-905e9eee-9027-468f-b542-3b35f87d8d24.png)
-	- Have a User Roles table (id, user_id, role_id, is_active, created, modified
     - Screenshot #3: ![Screenshot_20](https://user-images.githubusercontent.com/76708068/141408245-1b16f5b5-062c-4c6f-8c74-9d013d95007c.png)
-	[ ] \(mm/dd/yyyy of completion) Any output messages/errors should be “user friendly”
+      - forms/input, navigation bar, etc
+	[11/10/2021]] \(mm/dd/yyyy of completion) Any output messages/errors should be “user friendly”
     - Status: Completed
     - Direct Link: https://gm348-prod.herokuapp.com/Project/login.php
     - Pull Requests
@@ -119,7 +118,7 @@ Milestone Features:
       - Screenshot #1: ![Screenshot_21](https://user-images.githubusercontent.com/76708068/141408778-1ca750d0-3306-4b21-9776-e430d133ab7c.png)
       - Screenshot #2: ![Screenshot_22](https://user-images.githubusercontent.com/76708068/141408783-f58bbd80-786a-408e-9de5-141d04af4845.png)
 	- Any output messages/errors should be “user friendly”
-	[ ] \(mm/dd/yyyy of completion) User will be able to see their profile
+	[11/10/2021] \(mm/dd/yyyy of completion) User will be able to see their profile
   -  List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: https://gm348-prod.herokuapp.com/Project/profile.php
@@ -128,10 +127,10 @@ Milestone Features:
     - Screenshots
       - Screenshot #1: ![Screenshot_23](https://user-images.githubusercontent.com/76708068/141409098-98383328-6c52-4d35-bcfc-687963deafdd.png)
 	- User will be able to see their profile
-	[ ] \(mm/dd/yyyy of completion) User will be able to edit their profile
+	[11/10/2021] \(mm/dd/yyyy of completion) User will be able to edit their profile
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Partiallly Working
+    - Direct Link: https://gm348-prod.herokuapp.com/Project/profile.php
     - Pull Requests
       - https://github.com/G-McCarten/IT202-005/pull/34
     - Screenshots
@@ -141,53 +140,8 @@ Milestone Features:
 	- Any other fields should be properly validated
     - Screenshot #3: ![Screenshot_26](https://user-images.githubusercontent.com/76708068/141409829-181cde3b-94d2-4d6a-9450-0381c630d654.png)
      	- Allow password reset (only if the existing correct password is provided)
-- [ ] User will be able to register a new account
-- [ ] Form Fields
-- [ ] Username, email, password, confirm password(other fields optional)
-- [ ] Email is required and must be validated
-- [ ] Username is required
-- [ ] Confirm password’s match
-- [ ] Users Table
-- [ ] Id, username, email, password (60 characters), created, modified
-- [ ] Password must be hashed (plain text passwords will lose points)
-- [ ] Email should be unique
-- [ ] Username should be unique
-- [ ] System should let user know if username or email is taken and allow the user to correct the error without wiping/clearing the form
-- [ ] The only fields that may be cleared are the password fields
-- [ ] User will be able to login to their account (given they enter the correct credentials)
-- [ ] Form
-- [ ] User can login with email or username
-- [ ] This can be done as a single field or as two separate fields
-- [ ] Password is required
-- [ ] User should see friendly error messages when an account either doesn’t exist or if passwords don’t match
-- [ ] Logging in should fetch the user’s details (and roles) and save them into the session.
-- [ ] User will be directed to a landing page upon login
-- [ ] This is a protected page (non-logged in users shouldn’t have access)
-- [ ] This can be home, profile, a dashboard, etc
-- [ ] User will be able to logout
-- [ ] Logging out will redirect to login page
-- [ ] User should see a message that they’ve successfully logged out
-- [ ] Session should be destroyed (so the back button doesn’t allow them access back in)
-- [ ] Basic security rules implemented
-Authentication:
-- [ ] Function to check if user is logged in
-- [ ] Function should be called on appropriate pages that only allow logged in users
-- [ ] Roles/Authorization:
-- [ ] Have a roles table (see below)
-- [ ] Basic Roles implemented
-- [ ] Have a Roles table	(id, name, description, is_active, modified, created)
-- [ ] Have a User Roles table (id, user_id, role_id, is_active, created, modified)
-- [ ] Include a function to check if a user has a specific role (we won’t use it for this milestone but it should be usable in the future)
-- [ ] Site should have basic styles/theme applied; everything should be styled
-I.e., forms/input, navigation bar, etc
-- [ ] Any output messages/errors should be “user friendly”
-- [ ] Any technical errors or debug output displayed will result in a loss of points
-- [ ] User will be able to see their profile
-- [ ] Email, username, etc
-- [ ] User will be able to edit their profile
-- [ ] Changing username/email should properly check to see if it’s available before allowing the change
-- [ ] Any other fields should be properly validated
-- [ ] Allow password reset (only if the existing correct password is provided)
+
+
 Hint: logic for the password check would be similar to login
 	Milestone 2:
 Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator (may build off of a sample from the site shared in class)
