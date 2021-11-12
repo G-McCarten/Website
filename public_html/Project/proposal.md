@@ -24,13 +24,26 @@ Milestone Features:
 	Milestone 1:
 	[ ] \(mm/dd/yyyy of completion) User will be able to register a new account
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Partiallly Working
+    - Direct Link: https://gm348-prod.herokuapp.com/Project/register.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - https://github.com/G-McCarten/IT202-005/pull/25
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1: ![Screenshot_9](https://user-images.githubusercontent.com/76708068/141400045-b0e69997-6b74-48f8-bc8f-6a3859686e70.png)
+        - Form Fields, Username, email, password, confirm password(other fields optional), Email is required and must be validated
+      - Screenshot #2: ![Screenshot_10](https://user-images.githubusercontent.com/76708068/141400820-fa5008f1-b191-43eb-a8c0-1a29e5721ef8.png) 
+	- Username is required
+      - Screenshot #3: ![Screenshot_12](https://user-images.githubusercontent.com/76708068/141401319-43ad11df-9db5-4628-8072-3da6c10b0c03.png)
+	- Confirm password’s match 
+      - Screenshot #4: ![Screenshot_13](https://user-images.githubusercontent.com/76708068/141401446-72ca8c13-1d4f-40bf-8313-b9927c4c0003.png)
+	- User Table, Id, username, email, password (60 characters), created, modified Password must be hashed
+      - Screenshot #5: ![Screenshot_15](https://user-images.githubusercontent.com/76708068/141401813-4f1efc1f-5e9d-482e-b89f-6f2d5ea8a817.png)
+	-  Email should be unique
+      - Screenshot #6: ![Screenshot_14](https://user-images.githubusercontent.com/76708068/141401966-f0327510-c1a9-420a-9234-b3fb5834129e.png)
+	- Username should be unique
+     - Screenshot #2: ![Screenshot_10](https://user-images.githubusercontent.com/76708068/141400820-fa5008f1-b191-43eb-a8c0-1a29e5721ef8.png) 
+	- Username is requiredConfirm password’s match
+![Screenshot_12](https://user-images.githubusercontent.com/76708068/141401319-43ad11df-9db5-4628-8072-3da6c10b0c03.png)
 	[ ] \(mm/dd/yyyy of completion) User will be able to login to their account (given they enter the correct credentials)
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
