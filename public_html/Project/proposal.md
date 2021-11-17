@@ -153,3 +153,48 @@ Milestone Features:
 	- Any other fields should be properly validated
     - Screenshot #3: ![Screenshot_26](https://user-images.githubusercontent.com/76708068/141409829-181cde3b-94d2-4d6a-9450-0381c630d654.png)
      	- Allow password reset (only if the existing correct password is provided)
+
+
+
+Milestone 2:
+
+- [ ] \(mm/dd/yyyy of completion) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+     - PR link #1 (repeat as necessary)
+    - Screenshots
+     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1 description explaining what you're trying to show
+
+
+- [ ] \(mm/dd/yyyy of completion) The system will save the user’s score at the end of the game if the user is logged in
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+     - PR link #1 (repeat as necessary)
+    - Screenshots
+     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1 description explaining what you're trying to show
+      
+      
+- [ ] \(mm/dd/yyyy of completion) The user will be able to see their last 10 scores
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+     - PR link #1 (repeat as necessary)
+    - Screenshots
+     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1 description explaining what you're trying to show
+
+- [ ] \(mm/dd/yyyy of completion) Create functions that output the following scoreboards (this will be used later)
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+     - PR link #1 (repeat as necessary)
+    - Screenshots
+     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1 description explaining what you're trying to show
