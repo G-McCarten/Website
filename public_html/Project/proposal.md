@@ -22,7 +22,7 @@ Your Name: Gerald McCarten
 
 Milestone Features:
 	Milestone 1:
-- [ ] [11/10/2021] \(mm/dd/yyyy of completion) User will be able to register a new account
+- [x] [11/10/2021] \(mm/dd/yyyy of completion) User will be able to register a new account
   -  List of Evidence of Feature Completion
     - Status: Partiallly Working
     - Direct Link: https://gm348-prod.herokuapp.com/Project/register.php
