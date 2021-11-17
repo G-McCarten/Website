@@ -128,7 +128,7 @@ Milestone Features:
      - Screenshot #1: ![Screenshot_23](https://user-images.githubusercontent.com/76708068/141409098-98383328-6c52-4d35-bcfc-687963deafdd.png)
 	- User will be able to see their profile
 	[11/10/2021] \(mm/dd/yyyy of completion) User will be able to edit their profile
-  -  List of Evidence of Feature Completion
+ - [] List of Evidence of Feature Completion
     - Status: Partiallly Working
     - Direct Link: https://gm348-prod.herokuapp.com/Project/profile.php
     - Pull Requests
