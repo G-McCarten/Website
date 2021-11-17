@@ -46,7 +46,7 @@ Milestone Features:
       - Screenshot #8: ![Screenshot_12](https://user-images.githubusercontent.com/76708068/141401319-43ad11df-9db5-4628-8072-3da6c10b0c03.png)
 	-Confirm password’s match
 	
-	[11/10/2021] \(mm/dd/yyyy of completion) User will be able to login to their account (given they enter the correct credentials)
+- [x] [11/10/2021] \(mm/dd/yyyy of completion) User will be able to login to their account (given they enter the correct credentials)
   -  List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: https://gm348-prod.herokuapp.com/Project/login.php
@@ -67,7 +67,7 @@ Milestone Features:
       	-This is a protected page (non-logged in users shouldn’t have access). (Typing home.php in url before pressing enter)
       - Screenshot #8: ![Screenshot_11](https://user-images.githubusercontent.com/76708068/141405115-5d5d4555-68e1-4e89-8fc5-7f371972e663.png)
       	- (After pressing enter)
-	[11/10/2021] \(mm/dd/yyyy of completion) User will be able to logout
+- [x] [11/10/2021] \(mm/dd/yyyy of completion) User will be able to logout
   -  List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: https://gm348-prod.herokuapp.com/Project/logout.php
@@ -79,7 +79,7 @@ Milestone Features:
    	- User should see a message that they’ve successfully logged out
    	- Session should be destroyed (so the back button doesn’t allow them access back in)
 	[11/10/2021] \(mm/dd/yyyy of completion) Basic security rules implemented
-  -  List of Evidence of Feature Completion
+- [x] List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: https://gm348-prod.herokuapp.com/Project/login.php
     - Pull Requests
@@ -89,7 +89,7 @@ Milestone Features:
     - Screenshot #2: ![Screenshot_17](https://user-images.githubusercontent.com/76708068/141405884-b7e81129-6eb4-4d3f-bf03-c65542c69953.png)
 	- Function should be called on appropriate pages that only allow logged in user. In home.php:
 	[11/10/2021] \(mm/dd/yyyy of completion) Basic Roles implemented
-  -  List of Evidence of Feature Completion
+- [x] List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: https://gm348-prod.herokuapp.com/Project/login.php
     - Pull Requests
@@ -100,7 +100,7 @@ Milestone Features:
 	- Have a User Roles table (id, user_id, role_id, is_active, created, modified
     - Screenshot #3: ![Screenshot_18](https://user-images.githubusercontent.com/76708068/141406543-db318eda-4e76-4b21-90ca-5df87fcb1d6d.png)
 	[11/10/2021] \(mm/dd/yyyy of completion) Site should have basic styles/theme applied; everything should be styled
-  -  List of Evidence of Feature Completion
+- [x] List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: https://gm348-prod.herokuapp.com/Project/login.php
     - Pull Requests
@@ -119,7 +119,7 @@ Milestone Features:
      - Screenshot #2: ![Screenshot_22](https://user-images.githubusercontent.com/76708068/141408783-f58bbd80-786a-408e-9de5-141d04af4845.png)
 	- Any output messages/errors should be “user friendly”
 	[11/10/2021] \(mm/dd/yyyy of completion) User will be able to see their profile
-  -  List of Evidence of Feature Completion
+- [x] List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: https://gm348-prod.herokuapp.com/Project/profile.php
     - Pull Requests
