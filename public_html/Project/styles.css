@@ -13,8 +13,16 @@
 .alert-info {
     background-color: teal;
 }
-nav li{display: inline; background-color: rebeccapurple;}
-nav li a{color: rgb(105, 195, 255)}
+nav li{display: inline;  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #EEEEEE;}
+nav li a{display: block;
+    color: #000000;
+    font-weight:bold;
+    padding: 8px 16px;
+    text-decoration: none;}
 input{ font-size: 16px;
     font-size: max(8px, 1em);
     padding: 0.25em 0.5em;
