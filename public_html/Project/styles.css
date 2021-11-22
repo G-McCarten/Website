@@ -18,7 +18,7 @@ nav li{display: inline;  list-style-type: none;
     padding: 0;
     width: 200px;
     background-color: #EEEEEE;}
-nav li a{display: block;
+nav li a{
     color: #000000;
     font-weight:bold;
     padding: 8px 16px;
