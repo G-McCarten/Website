@@ -85,30 +85,38 @@ if (isset($_POST["save"])) {
 $email = get_user_email();
 $username = get_username();
 ?>
+<div class="form-box">
+<h2>Update Information</h2> 
 <form method="POST" onsubmit="return validate(this);">
-    <div class="mb-3">
-        <label for="email">Email</label>
+    <div class="input-box">
         <input type="email" name="email" id="email" value="<?php se($email); ?>" />
+        <label for="email">Email</label>
     </div>
-    <div class="mb-3">
-        <label for="username">Username</label>
+    <div class="input-box">
         <input type="text" name="username" id="username" value="<?php se($username); ?>" />
+        <label for="username">Username</label>
     </div>
-    <!-- DO NOT PRELOAD PASSWORD -->
-    <div>Password Reset</div>
-    <div class="mb-3">
-        <label for="cp">Current Password</label>
+    <!-- DO NOT PRELOAD PASSWORD input-box -->
+    <div>Password Reset </div> <br><br>
+    <div class="input-box">
         <input type="password" name="currentPassword" id="cp" />
+        <label for="cp">Current Password</label>
     </div>
-    <div class="mb-3">
-        <label for="np">New Password</label>
+    <div class="input-box">
         <input type="password" name="newPassword" id="np" />
+        <label for="np">New Password</label>
     </div>
-    <div class="mb-3">
-        <label for="conp">Confirm Password</label>
+    <div class="input-box">
         <input type="password" name="confirmPassword" id="conp" />
+        <label for="conp">Confirm Password</label>
     </div>
-    <input type="submit" value="Update Profile" name="save" />
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <input type="submit" value="Update Profile" name="save" />
+    </a>
 </form>
 
 <script>
@@ -122,7 +130,7 @@ $username = get_username();
         //find the flash container, create a new element, appendChild
         if (pw !== con) {
             //find the container
-            /*let flash = document.getElementById("flash");
+            let flash = document.getElementById("flash");
             //create a div (or whatever wrapper we want)
             let outerDiv = document.createElement("div");
             outerDiv.className = "row justify-content-center";
@@ -133,7 +141,7 @@ $username = get_username();
             innerDiv.innerText = "Password and Confirm password must match";
             outerDiv.appendChild(innerDiv);
             //add the element to the DOM (if we don't it merely exists in memory)
-            flash.appendChild(outerDiv);*/
+            flash.appendChild(outerDiv);
             flash("Password and Confirm password must match", "warning");
             isValid = false;
         }
