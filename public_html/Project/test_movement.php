@@ -11,7 +11,7 @@
     body{ margin: 0;}
 </style>
 
-<div class="fixed text-white ml-2 mt-1 select-none"><span>Score: </span><span id="scoreEl">0</span></div>
+<div class="fixed text-black ml-2 mt-1 select-none"><span>Score: </span><span id="scoreEl">0</span></div>
 
 <!--<button class="fixed bottom-0 left-0" id="endGame">End Game</button>-->
 
@@ -27,5 +27,5 @@
         <input type="submit" name="submit" value="save" id="sub"/> 
     </form>
 </body>-->
-<script src="./shooter.js"></script>
+<script src="./game.js"></script>
  
