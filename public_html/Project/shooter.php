@@ -15,9 +15,16 @@
 
 <!--<button class="fixed bottom-0 left-0" id="endGame">End Game</button>-->
 
-<canvas>
-    
-</canvas>
+<div>
+    <div class="bg-white">
+        <h1>0</h1>
+        <p>Points</p>
+        <div>
+            <button>Start Game</button>
+        </div>
+    </div>
+</div>
+<canvas></canvas>
 
 <!--<body>
     <form id="myForm" method="post" action="" class="fixed bottom-5">
