@@ -5,6 +5,9 @@ canvas.width = innerWidth
 canvas.height = innerHeight
 
 const scoreEl = document.querySelector('#scoreEl')
+const startGameBtn= document.querySelector('#startGameBtn')
+const modalEL= document.querySelector('#modalEL')
+const modalScoreEL= document.querySelector('#modalScoreEL')
 let score = 0
 
 /*const player = {
@@ -125,6 +128,13 @@ addEventListener('click', () => {
     scoreEl.innerHTML = score
 })
 
+startGameBtn.addEventListener('click', () => {
+    modalEL.style.display = "none"
+    animate()
+    spawnEnemies()
+
+})
+
 function playerMovement(){
     if (controller.up) { player.yVelocity -= 0.25; }
     if (controller.left) { player.xVelocity -= 0.25; }
@@ -152,6 +162,8 @@ function animate(){
 
         const dist = Math.hypot(player.x - enemy.x, player.y - enemy.y)
         if (dist - enemy.radius - player.radius < 1){
+            modalEL.style.display = "flex"
+            modalScoreEL.innerHTML = score
             cancelAnimationFrame(animationId )
         }
     })
@@ -202,8 +214,6 @@ function spawnEnemies(){
 }  
 window.addEventListener("keydown", controller.keyListener)
 window.addEventListener("keyup", controller.keyListener);
-animate()
-spawnEnemies()
 
 /*let textarea = document.getElementById('test-target'),
 consoleLog = document.getElementById('console-log'),
