@@ -172,6 +172,24 @@ function animate(){
         const dist = Math.hypot(player.x - enemy.x, player.y - enemy.y)
         if (dist - enemy.radius - player.radius < 1){
             modalEL.style.display = "flex"
+            //send score to database
+            $.ajax({
+                url: "save_score.php",
+                type: "POST",
+                contentType: "application/x-www-form-urlencoded",
+                data: {
+                    score: score
+                },
+                success: function( data )
+                {
+                    alert( data );
+                },
+                error: function(){
+                    alert('ERRO');
+                }
+            });
+            
+
             modalScoreEL.innerHTML = score
             cancelAnimationFrame(animationId)
             clearInterval(points)
@@ -261,9 +279,14 @@ addEventListener('keyup', (e) => {
 //    test = setTimeout(function() {console.log("game over"); score=0; scoreEl.innerHTML = score }, 100)
 //}
 
+
 $(document).ready(function(){
     $('#myForm').submit(function(){
-        var data = $(this).serialize();
+        //var data = $(this).serialize();
+        
+        var data = {
+            score: score
+        }
         console.log(data)
         $.ajax({
             url: "save_score.php",
@@ -277,7 +300,6 @@ $(document).ready(function(){
                 alert('ERRO');
             }
         });
-
         return false;
     });
 });

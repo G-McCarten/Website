@@ -2,10 +2,14 @@
 require_once('../../lib/functions.php');
 session_start();
 
+//$json = file_get_contents('php://input');
+//$data = json_decode($json, true)["data"];
+var_dump($_POST);
+$data = $_POST;
 if(isset($_POST)){
-    //$score = se($_POST, "score", "", false);
-    
-    $score = $_POST['score'];
+    $score = (int)se($data, 'score', 0, false);
+    var_dump($score);
+    //$score = $_POST['score'];
     $user_id = $_SESSION['user']['id'];
     $db = getDB();
     
