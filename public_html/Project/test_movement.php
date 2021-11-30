@@ -8,23 +8,16 @@
 </head>
 
 <style> 
-    body{ margin: 0; background-color: black;}
+    body{ margin: 0;}
 </style>
 
-<div class="fixed text-white ml-2 mt-1 select-none"><span>Score: </span><span id="scoreEl">0</span></div>
+<div class="fixed text-black ml-2 mt-1 select-none"><span>Score: </span><span id="scoreEl">0</span></div>
 
 <!--<button class="fixed bottom-0 left-0" id="endGame">End Game</button>-->
 
-<div id="modalEL" class="fixed inset-0 flex items-center justify-center">
-    <div class="bg-white max-w-md w-full p-6 text-center">
-        <h1 id="modalScoreEL" class="text-4xl font-bold leading-none">0</h1>
-        <p class="text-sm text-gray-700 mb-4">Points</p>
-        <div>
-            <button id="startGameBtn" class="text-black bg-blue-500 w-full py-2 rounded-full">Start Game</button>
-        </div>
-    </div>
-</div>
-<canvas></canvas>
+<canvas>
+    
+</canvas>
 
 <!--<body>
     <form id="myForm" method="post" action="" class="fixed bottom-5">
@@ -34,5 +27,5 @@
         <input type="submit" name="submit" value="save" id="sub"/> 
     </form>
 </body>-->
-<script src="./shooter.js"></script>
+<script src="./game.js"></script>
  
