@@ -84,8 +84,14 @@ class Enemy{
     }
 }
 
-const player = new Player(canvas.width/2, canvas.height/2, 15, 'blue')
-const enemies = []
+let player = new Player(canvas.width/2, canvas.height/2, 15, 'blue')
+let enemies = []
+
+function init(){
+    player = new Player(canvas.width/2, canvas.height/2, 15, 'blue')
+    enemies = []
+    score = 0
+}
 
 const controller = {
 
@@ -122,16 +128,19 @@ const controller = {
   
   };       
 
-addEventListener('click', () => {
-    console.log("go")
+/*addEventListener('click', () => {
     score+=10
     scoreEl.innerHTML = score
-})
+})*/
 
+let points
 startGameBtn.addEventListener('click', () => {
+    init()
     modalEL.style.display = "none"
     animate()
     spawnEnemies()
+    scoreEl.innerHTML = score
+    points = setInterval(startPoints, 1000)
 
 })
 
@@ -164,12 +173,17 @@ function animate(){
         if (dist - enemy.radius - player.radius < 1){
             modalEL.style.display = "flex"
             modalScoreEL.innerHTML = score
-            cancelAnimationFrame(animationId )
+            cancelAnimationFrame(animationId)
+            clearInterval(points)
         }
     })
-
-    
 }
+
+function startPoints(){
+        score+=10
+        scoreEl.innerHTML = score
+}
+
 
 const player_loop = function () {
 
