@@ -2,25 +2,34 @@
 require(__DIR__ . "/../../partials/nav.php");
 reset_session();
 ?>
+<div class="form-box">
+<h2>Register</h2> 
 <form onsubmit="return validate(this)" method="POST">
-    <div>
-        <label for="email">Email</label>
+    <div class="input-box">
         <input type="email" name="email" required />
+        <label for="email">Email</label>
     </div>
-    <div>
-        <label for="username">Username</label>
+    <div class="input-box">
         <input type="text" name="username" required maxlength="30" />
+        <label for="username">Username</label>
     </div>
-    <div>
-        <label for="pw">Password</label>
+    <div class="input-box">
         <input type="password" id="pw" name="password" required minlength="8" />
+        <label for="pw">Password</label>
     </div>
-    <div>
-        <label for="confirm">Confirm</label>
+    <div class="input-box">
         <input type="password" name="confirm" required minlength="8" />
+        <label for="confirm">Confirm</label>
     </div>
-    <input type="submit" value="Register" />
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <input type="submit" value="Register" />
+    </a>
 </form>
+</div>
 <script>
     function validate(form) {
         //TODO 1: implement JavaScript validation
@@ -34,12 +43,7 @@ reset_session();
 if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm"])) {
     $email = se($_POST, "email", "", false);
     $password = se($_POST, "password", "", false);
-    $confirm = se(
-        $_POST,
-        "confirm",
-        "",
-        false
-    );
+    $confirm = se($_POST, "confirm", "", false);
     $username = se($_POST, "username", "", false);
     //TODO 3
     $hasError = false;

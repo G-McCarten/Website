@@ -160,7 +160,12 @@ Milestone 2:
 
 - [ ] \(mm/dd/yyyy of completion) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Completed
+    - What game will you be doing?
+        - Arcade Game
+    - Briefly describe it.
+        - Shooter with an extra feature of building to protect yourself. You will also be able to slow down time. 
+
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
      - PR link #1 (repeat as necessary)
