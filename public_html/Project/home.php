@@ -24,6 +24,29 @@ foreach ($last10Scores as $row) {
   echo "<td>" . $row['created'] . "</td>";
   }
 echo "</table>";
+
+
+$time_period = "week";
+$leaderboard = get_top_10("$time_period");
+if (!empty($leaderboard[0])){
+    echo "Leaderboard";
+    echo "<table border=4 bgcolor='white' class='table-auto'>
+        <tr>
+        <th>Username</th>
+        <th>Score</th>
+        <th>Date</th>
+        </tr>";
+    
+    foreach ($leaderboard as $row) {
+      echo "<tr>";
+      echo "<td>" . $row['username'] . "</td>";
+      echo "<td>" . $row['score'] . "</td>";
+      echo "<td>" . $row['created'] . "</td>";
+      }
+    echo "</table>"; }
+    else{
+        echo "No " . $time_period . " scores to display";
+    }
 ?> 
 
 
