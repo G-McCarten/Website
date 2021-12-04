@@ -148,22 +148,6 @@ $username = get_username();
         return isValid;
     }
 </script>
-
-
 <?php
-$last10Scores = get_last_10_scores();
-echo "Your last 10 scores";
-echo "<table border=4 bgcolor='white' class='table-auto'>
-    <tr>
-    <th>Score</th>
-    <th>Date</th>
-    </tr>";
-
-foreach ($last10Scores as $row) {
-  echo "<tr>";
-  echo "<td>" . $row['score'] . "</td>";
-  echo "<td>" . $row['created'] . "</td>";
-  }
-echo "</table>";
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>
