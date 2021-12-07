@@ -84,6 +84,7 @@ if (isset($_POST["save"])) {
 <?php
 $email = get_user_email();
 $username = get_username();
+$points = get_Points()[0]['points'];
 ?>
 <div class="form-box">
 <h2>Update Information</h2> 
@@ -118,6 +119,13 @@ $username = get_username();
       <input type="submit" value="Update Profile" name="save" />
     </a>
 </form>
+</div>
+
+<div class="inline pl-5 ml-5 inset-0 flex items-center justify-center">
+    <div class="bg-white max-w-md w-full p-6 text-center"> <p>Your points: <?php echo($points)?></p>
+    </div>
+</div>
+  
 
 <script>
     function validate(form) {
@@ -148,22 +156,6 @@ $username = get_username();
         return isValid;
     }
 </script>
-
-
 <?php
-$last10Scores = get_last_10_scores();
-echo "Your last 10 scores";
-echo "<table border=4 bgcolor='white' class='table-auto'>
-    <tr>
-    <th>Score</th>
-    <th>Date</th>
-    </tr>";
-
-foreach ($last10Scores as $row) {
-  echo "<tr>";
-  echo "<td>" . $row['score'] . "</td>";
-  echo "<td>" . $row['created'] . "</td>";
-  }
-echo "</table>";
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>
