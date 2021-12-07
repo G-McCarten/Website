@@ -131,6 +131,23 @@ function get_url($dest)
     return $BASE_PATH . $dest;
 }
 
+function get_Points(){
+    $user_id = $_SESSION['user']['id'];
+    $db = getDB();
+    $query = "Select points from Users WHERE id = :id";
+    $stmt = $db->prepare($query);
+    try {
+        $stmt->execute([":id" => $user_id]);
+        $r = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        if ($r) {
+            $results = $r;
+        }
+    } catch (PDOException $e) {
+        error_log("Error fetching points for $db: " . var_export($e->errorInfo, true));
+    }
+    return $results;
+}
+
 
 
 function debug_to_console($data) {
