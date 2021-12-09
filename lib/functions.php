@@ -148,7 +148,18 @@ function get_Points(){
     return $results;
 }
 
-
+function update_points($user_id){
+    debug_to_console($user_id);
+    $db = getDB();
+    $stmt = $db->prepare("UPDATE Users SET points = (SELECT SUM(point_change) FROM PointsHistory WHERE Users.id = PointsHistory.user_id) WHERE id=:user_id");
+    try {
+        $stmt->execute([":user_id" => $user_id]);
+        flash("Saved points");
+    } catch (Exception $e) {
+        debug_to_console("error");
+        //users_check_duplicate($e->errorInfo);
+    }
+}
 
 function debug_to_console($data) {
     $output = $data;
