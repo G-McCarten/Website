@@ -175,3 +175,110 @@ Milestone 2:
  [https://github.com/G-McCarten/IT202-005/pull/home.php](https://github.com/G-McCarten/IT202-005/pull/home.php)</p></td></tr><tr><td>PRs:<p>
 
  [https://github.com/G-McCarten/IT202-005/pull/70](https://github.com/G-McCarten/IT202-005/pull/70)</p></td></tr><tr><td><table><tr><td>F4 - Top 10 Weekly, Monthly, Lifetime<tr><td>Status: completed</td></tr><tr><td><img width="100%" src="https://user-images.githubusercontent.com/76708068/144695608-8ea9df73-6820-4121-8c69-df01261947d8.png"><p>Default shows weekly for now</td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F4 - Scoreboards should show no more than 10 results; if there are no results a proper message should be displayed (i.e., “No [time period] scores to display”)<tr><td>Status: completed</td></tr><tr><td><img width="100%" src="https://user-images.githubusercontent.com/76708068/144695634-3563d905-c212-4074-89c3-5f7c825927b8.png"><p>SQL already limits to 10 results, displays proper "no result" message depending on time period.</td></tr></td></tr></table></td></tr></td></tr></table>
+	
+	
+	
+Milestone 3:
+
+- [ ] \(mm/dd/yyyy of completion) Users will have points associated with their account.
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+     - PR link #1 (repeat as necessary)
+    - Screenshots
+     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1 description explaining what you're trying to show
+
+
+- [ ] \(mm/dd/yyyy of completion) Create a PointsHistory table
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+     - PR link #1 (repeat as necessary)
+    - Screenshots
+     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1 description explaining what you're trying to show
+
+
+- [ ] \(mm/dd/yyyy of completion) Competitions table should have the following columns
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+     - PR link #1 (repeat as necessary)
+    - Screenshots
+     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1 description explaining what you're trying to show
+
+- [ ] \(mm/dd/yyyy of completion) User will be able to create a competition
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+     - PR link #1 (repeat as necessary)
+    - Screenshots
+     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1 description explaining what you're trying to show
+
+
+- [ ] \(mm/dd/yyyy of completion) Each new participant causes the Reward value to increase by at least 1 or 50% of the joining fee rounded up
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+     - PR link #1 (repeat as necessary)
+    - Screenshots
+     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1 description explaining what you're trying to show
+
+
+
+- [ ] \(mm/dd/yyyy of completion) Have a page where the User can see active competitions (not expired)
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+     - PR link #1 (repeat as necessary)
+    - Screenshots
+     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1 description explaining what you're trying to show
+
+- [ ] \(mm/dd/yyyy of completion) Will need an association table CompetitionParticipants
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+     - PR link #1 (repeat as necessary)
+    - Screenshots
+     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1 description explaining what you're trying to show
+
+
+- [ ] \(mm/dd/yyyy of completion) User can join active competitions 
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+     - PR link #1 (repeat as necessary)
+    - Screenshots
+     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1 description explaining what you're trying to show
+
+
+- [ ] \(mm/dd/yyyy of completion) Create function that calculates competition winners
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+     - PR link #1 (repeat as necessary)
+    - Screenshots
+     - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1 description explaining what you're trying to show
+
+
+
+Milestone 4:
+
+<table><tr><td>Milestone 4</td></tr><tr><td><table><tr><td>F1 - User can set their profile to be public or private (will need another column in Users table) ()</td></tr><tr><td>Status: pending</td></tr><tr><td>Links:</td></tr><tr><td>PRs:</td></tr><tr><td><table><tr><td>F1 - If public, hide email address from other users<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><table><tr><td>F2 - User will be able to see their competition history ()</td></tr><tr><td>Status: pending</td></tr><tr><td>Links:</td></tr><tr><td>PRs:</td></tr><tr><td><table><tr><td>F2 - Limit to 10 results<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F2 - Paginate anything after 10<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F2 - If no results, show the appropriate message<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><table><tr><td>F3 - User with the role of “admin” can edit a competition where paid_out = false ()</td></tr><tr><td>Status: pending</td></tr><tr><td>Links:</td></tr><tr><td>PRs:</td></tr><tr><td><table><tr><td>F3 - They can adjust any of the regular form values<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F3 - If the competition was expired they can update the duration to include extra time<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><table><tr><td>F4 - Add pagination to the Active Competitions view ()</td></tr><tr><td>Status: pending</td></tr><tr><td>Links:</td></tr><tr><td>PRs:</td></tr><tr><td><table><tr><td>F4 - Show 10 competitions per page<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F4 - Paginate anything after 10<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F4 - If no results, show the appropriate message<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><table><tr><td>F5 - Anywhere a username is displayed should be a link to that user’s profile ()</td></tr><tr><td>Status: pending</td></tr><tr><td>Links:</td></tr><tr><td>PRs:</td></tr><tr><td><table><tr><td>F5 - This includes all scoreboards<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F5 - If the profile is private you can have the page just display “this profile is private” upon access<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><table><tr><td>F6 - Viewing an active or expired competition should show the top 10 scoreboard related to that competition ()</td></tr><tr><td>Status: pending</td></tr><tr><td>Links:</td></tr><tr><td>PRs:</td></tr><tr><td><table><tr><td>F6 - item 1<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><table><tr><td>F7 - Game should be fully implemented/complete by this point ()</td></tr><tr><td>Status: pending</td></tr><tr><td>Links:</td></tr><tr><td>PRs:</td></tr><tr><td><table><tr><td>F7 - Game should tell the player if they’re not logged in that their score will not be recorded.<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><table><tr><td>F8 - User’s score history will include pagination ()</td></tr><tr><td>Status: pending</td></tr><tr><td>Links:</td></tr><tr><td>PRs:</td></tr><tr><td><table><tr><td>F8 - Show latest 10<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F8 - Paginate after 10<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F8 - Show appropriate message for no results<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><table><tr><td>F9 - Home page will have a weekly, monthly, and lifetime scoreboard ()</td></tr><tr><td>Status: pending</td></tr><tr><td>Links:</td></tr><tr><td>PRs:</td></tr><tr><td><table><tr><td>F9 - Will also have a link to the game<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F9 - Scoreboards will show username and points for the session<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr></td></tr></table>
