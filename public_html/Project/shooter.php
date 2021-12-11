@@ -1,5 +1,6 @@
 <?php
-
+require_once(__DIR__ . "/../../partials/nav.php");
+is_logged_in(true);
 ?>
 <head>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">   
