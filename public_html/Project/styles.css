@@ -109,5 +109,27 @@ nav.fill ul li a:hover:after {
   opacity: 1;
 }
 
+.column {
+  float: left;
+  padding: 10px;
+  height: 90%; /* Should be removed. Only for demonstration */
+}
+
+.left, .right {
+  width: 33.33%;
+}
+
+.middle {
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 
 

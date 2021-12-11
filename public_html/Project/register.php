@@ -2,7 +2,7 @@
 require(__DIR__ . "/../../partials/nav.php");
 reset_session();
 ?>
-<div class="form-box">
+<div class="form-box login">
 <h2>Register</h2> 
 <form onsubmit="return validate(this)" method="POST">
     <div class="input-box">

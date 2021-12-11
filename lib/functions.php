@@ -145,20 +145,58 @@ function get_Points(){
     } catch (PDOException $e) {
         error_log("Error fetching points for $db: " . var_export($e->errorInfo, true));
     }
-    return $results;
+    return $results[0]['points'];
 }
 
 function update_points($user_id){
-    debug_to_console($user_id);
     $db = getDB();
-    $stmt = $db->prepare("UPDATE Users SET points = (SELECT SUM(point_change) FROM PointsHistory WHERE Users.id = PointsHistory.user_id) WHERE id=:user_id");
+    $stmt = $db->prepare("UPDATE Users SET points = (SELECT SUM(point_change) FROM PointsHistory WHERE Users.id = PointsHistory.user_id)
+    WHERE id=:user_id");
     try {
         $stmt->execute([":user_id" => $user_id]);
         flash("Saved points");
     } catch (Exception $e) {
-        debug_to_console("error");
-        //users_check_duplicate($e->errorInfo);
+       flash("Error updating users points");
     }
+}
+
+function deduct_points($user_id, $point_change, $reason){
+    $db = getDB();
+    $stmt = $db->prepare("INSERT INTO PointsHistory (point_change, user_id, reason) VALUES(:point_change, :user_id, :reason)");
+    try {
+        $stmt->execute([":point_change" => $point_change, ":user_id" => $user_id, ":reason" => $reason]);
+        flash("Deducted points");
+    } catch (Exception $e) {
+        flash("Error deducting points");
+    }
+    update_points($user_id);
+}
+
+function add_to_competition($comp_id, $user_id){
+    $db = getDB();
+    $stmt = $db->prepare("INSERT INTO UserComps (user_id, competition_id) VALUES (:uid, :cid)");
+    try {
+        $stmt->execute([":uid" => $user_id, ":cid" => $comp_id]);
+        update_participants($comp_id);
+        return true;
+    } catch (PDOException $e) {
+        error_log("Join Competition error: " . var_export($e, true));
+    }
+    return false;
+}
+
+function update_participants($comp_id)
+{
+    $db = getDB();
+    $stmt = $db->prepare("UPDATE Competitions set current_participants = (SELECT IFNULL(COUNT(1),0) FROM UserComps WHERE competition_id = :cid), 
+    current_reward = IF(join_cost > 0, current_reward + CEILING(join_cost * 0.5), current_reward) WHERE id = :cid");
+    try {
+        $stmt->execute([":cid" => $comp_id]);
+        return true;
+    } catch (PDOException $e) {
+        error_log("Update competition participant error: " . var_export($e, true));
+    }
+    return false;
 }
 
 function debug_to_console($data) {
