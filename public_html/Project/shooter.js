@@ -9,6 +9,7 @@ const startGameBtn= document.querySelector('#startGameBtn')
 const modalEL= document.querySelector('#modalEL')
 const modalScoreEL= document.querySelector('#modalScoreEL')
 let score = 0
+let scoreToPoints = 0
 
 /*const player = {
 
@@ -182,14 +183,12 @@ function animate(){
                 },
                 success: function( data )
                 {
-                    alert( data );
+                    console.log(data);
                 },
                 error: function(){
-                    alert('ERRO');
+                    console.log("error");
                 }
             });
-            
-
             modalScoreEL.innerHTML = score
             cancelAnimationFrame(animationId)
             clearInterval(points)
