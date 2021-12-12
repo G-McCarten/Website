@@ -14,6 +14,8 @@
     background-color: teal;
 }
 
+h3 {display:inline;}
+
 body {
     font-family: 'Roboto', sans-serif;
     padding: 0;
