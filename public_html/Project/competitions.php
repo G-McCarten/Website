@@ -11,7 +11,7 @@ if (isset($_POST["join"])) {
     $cost = se($_POST, "cost", 0, false);
     if(get_Points() >= $cost){
         add_to_competition($comp_id, $user_id);
-        deduct_points($user_id, -$cost, "Joined competition id: " . $comp_id);
+        change_points($user_id, -$cost, "Joined competition id: " . $comp_id);
     }
 else{ flash("Not enough points"); }
 }
@@ -37,7 +37,8 @@ try {
 
 ?>
 <div class="container-fluid">
-<h1>Active Competitions</h1>
+<h3 display="inline">Active Competitions</h3>
+<h3 class="ml-20" display="inline"><a href="<?php echo get_url('create_competition.php'); ?>">Create Competition</a></h3>
     <table class="table-auto w3-table-all text-black">
         <thead>
             <th>Title</th>
@@ -78,19 +79,4 @@ try {
         </tbody>
     </table>
 </div>
-<div class="row">
-  <div class="column left" style="background-color:#aaa;">
-  <h2>Active Competitions</h2>
-  </div>
-  <div class="column middle" style="background-color:#bbb;">
-  <br>
-    <div class="inline pl-5 ml-5 inset-0 flex items-center justify-center">
-        <div class="bg-white max-w-md w-full p-6 text-center"> <p>Your Competitions:</p>
-    </div>
-  </div>
-        <br><li><a href="<?php echo get_url('create_competition.php'); ?>">Create Competition</a></li>
-  </div>
-  <div class="column right" style="background-color:#ccc;">
-    <p>Some text..</p>
-  </div>
-</div>
+

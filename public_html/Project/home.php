@@ -10,8 +10,6 @@ if (is_logged_in(true)) {
     //echo "<pre>" . var_export($_SESSION, true) . "</pre>";
 }
 
-
-
 $last10Scores = get_last_10_scores();
 if (!empty($last10Scores[0])){
     echo "<div class='w3-container'>";
