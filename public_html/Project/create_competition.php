@@ -52,9 +52,8 @@ if (isset($_POST["create_competition"])) {
         } catch (Exception $e) {
             flash("Error creating competition");
         }
-        $comp_id = $db->lastInsertId();
+        $comp_id = $db->lastInsertId(); //get id of competition just created
         //add user to competition
-        //get id of competition just created
         add_to_competition($comp_id, $user_id);
         deduct_points($user_id, -$create_cost, "Created and joined own competition");
     }   

@@ -27,10 +27,8 @@ if(isset($_POST)){
         flash("Saved score");
     } catch (Exception $e) {
         flash("error converting score");
-        //users_check_duplicate($e->errorInfo);
     }
-
-    debug_to_console("updating points");
+    
     update_points($user_id);
 }
 ?>
