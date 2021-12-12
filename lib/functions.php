@@ -199,6 +199,24 @@ function update_participants($comp_id)
     return false;
 }
 
+function calc_winners(){
+    $db = getDB();
+    $calced_comps = [];
+    $stmt = $db->prepare("select c.id,c.title, first_place_per, second_place_per, third_place_per, current_reward 
+    from Competitions c where expires <= CURRENT_TIMESTAMP() AND did_calc = 0 AND current_participants >= min_participants LIMIT 10");
+    try {
+        $stmt->execute();
+        $r = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        var_dump($r);
+        if ($r) {
+            var_dump($r);
+        }
+    }
+    catch (PDOException $e) {
+        error_log("Getting Expired Comps error: " . var_export($e, true));
+    }
+}   
+
 function debug_to_console($data) {
     $output = $data;
     if (is_array($output))
