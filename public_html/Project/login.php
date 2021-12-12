@@ -1,7 +1,7 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
 ?>
-<div class="form-box">
+<div class="form-box login">
 <h2>Login</h2> 
 <form onsubmit="return validate(this)" method="POST">
     <div class="input-box">
@@ -66,7 +66,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     if (!$hasError) {
         //TODO 4
         $db = getDB();
-        $stmt = $db->prepare("SELECT id, email, username, password from Users where email = :email OR username = :email");
+        $stmt = $db->prepare("SELECT id, email, username, points, password from Users where email = :email OR username = :email");
         try {
             $r = $stmt->execute([":email" => $email]);
             if ($r) {
@@ -89,6 +89,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
                         } else {
                             $_SESSION["user"]["roles"] = []; //no roles
                         }
+                        calc_winners();
                         die(header("Location: home.php"));
                     } else {
                         flash("Invalid password", "danger");

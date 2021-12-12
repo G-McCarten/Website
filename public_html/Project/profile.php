@@ -84,8 +84,11 @@ if (isset($_POST["save"])) {
 <?php
 $email = get_user_email();
 $username = get_username();
+$points = get_Points();
 ?>
-<div class="form-box">
+<div class="row">
+  <div class="column left" style="background-color:#aaa;">
+    <div class="form-box position1">
 <h2>Update Information</h2> 
 <form method="POST" onsubmit="return validate(this);">
     <div class="input-box">
@@ -118,7 +121,24 @@ $username = get_username();
       <input type="submit" value="Update Profile" name="save" />
     </a>
 </form>
+</div>
+  </div>
+  <div class="column middle" style="background-color:#bbb;">
+  <br>
+    <div class="inline pl-5 ml-5 inset-0 flex items-center justify-center">
+        <div class="bg-white max-w-md w-full p-6 text-center"> <p>Your points: <?php echo($points)?></p>
+    </div>
+  </div>
+        <br><li><a href="<?php echo get_url('create_competition.php'); ?>">Create Competition</a></li>
+  </div>
+  <div class="column right" style="background-color:#ccc;">
+    <p>Some text..</p>
+  </div>
+</div>
 
+
+
+  
 <script>
     function validate(form) {
         let pw = form.newPassword.value;
