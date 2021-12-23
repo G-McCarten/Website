@@ -2,10 +2,10 @@
 require_once(__DIR__ . "/db.php");
 $BASE_PATH = '/Project/'; //This is going to be a helper for redirecting to our base project path since it's nested in another folder
 
-function get_last_10_scores(){
+function get_last_scores($start, $per_page){
     $user_id = $_SESSION['user']['id'];
     $db = getDB();
-    $query = "Select score, created from Scores WHERE user_id = :id ORDER BY created desc LIMIT 10";
+    $query = "Select score, created from Scores WHERE user_id = :id ORDER BY created desc LIMIT $start, $per_page";
     $stmt = $db->prepare($query);
     try {
         $stmt->execute([":id" => $user_id]);
@@ -20,6 +20,19 @@ function get_last_10_scores(){
 
 }
 
+function get_scoreTableSize(){
+    $user_id = $_SESSION['user']['id'];
+    $db = getDB();
+    $query = "Select * FROM Scores WHERE user_id = :id" ;
+    $stmt = $db->prepare($query);
+    try {
+        $stmt->execute([":id" => $user_id]);
+        $count = $stmt->rowCount();
+    } catch (PDOException $e) {
+        error_log("Error fetching scores for $db: " . var_export($e->errorInfo, true));
+    }
+    return $count;
+}
 
 function get_top_10($duration = "day")
 {

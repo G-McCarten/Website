@@ -148,6 +148,20 @@ function get_Points(){
     return $results[0]['points'];
 }
 
+function get_profile($user_id){
+    $db = getDB();
+    $stmt = $db->prepare("Select username, email, public, created FROM Users WHERE id=$user_id");
+    try {
+        $stmt->execute();
+        $r = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $r[0];
+    } catch (PDOException $e) {
+        error_log("Join Competition error: " . var_export($e, true));
+    }
+    return false;
+}
+
+
 function update_points($user_id){
     $db = getDB();
     $stmt = $db->prepare("UPDATE Users SET points = (SELECT SUM(point_change) FROM PointsHistory WHERE Users.id = PointsHistory.user_id)
@@ -257,7 +271,7 @@ function calc_winners(){
     }
     catch (PDOException $e) {
         error_log("Getting Expired Comps error: " . var_export($e, true));
-    }
+    } 
     if (count($calced_comps) > 0) {
         $query = "UPDATE Competitions set did_calc = 1, did_payout = 1 WHERE id=:comp_id";
         foreach($calced_comps as $comp_id){

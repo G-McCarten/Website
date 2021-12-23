@@ -55,7 +55,7 @@ if (isset($_POST["create_competition"])) {
         $comp_id = $db->lastInsertId(); //get id of competition just created
         //add user to competition
         add_to_competition($comp_id, $user_id);
-        deduct_points($user_id, -$create_cost, "Created and joined own competition");
+        change_points($user_id, -$create_cost, "Created and joined own competition");
     }   
 }
 ?>
@@ -105,7 +105,7 @@ if (is_logged_in(true)) {?>
             <input type="submit" value="Create Competition" name="create_competition" id="create_competition"/> 
           </div>
         </a>
-        <label id="costLabel" class="ml-8 text-white font-bold text-3xl" for="create_competition">Cost: 0</label>
+        <label id="costLabel" class="ml-8 text-white font-bold text-3xl" for="create_competition">Cost: 2</label>
         </form>
     </div>
 <?php } ?>
