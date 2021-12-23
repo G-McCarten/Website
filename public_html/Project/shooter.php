@@ -1,6 +1,13 @@
 <?php
-require_once(__DIR__ . "/../../partials/nav.php");
-is_logged_in(true);
+require_once(__DIR__ . "/../../lib/functions.php");
+session_start();
+//require_once(__DIR__ . "/../../partials/nav.php");
+if (is_logged_in()){
+    $logged = true;
+}
+else{
+    $logged = false;
+}
 ?>
 <head>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">   
@@ -18,8 +25,10 @@ is_logged_in(true);
 
 <div id="modalEL" class="fixed inset-0 flex items-center justify-center">
     <div class="bg-white max-w-md w-full p-6 text-center">
+        <p><a href=home.php>Home</a></p>
+        <?php if (!$logged) { ?> <p>You must be logged in to record scores</p> <?php } ?>
         <h1 id="modalScoreEL" class="text-4xl font-bold leading-none">0</h1>
-        <p class="text-sm text-gray-700 mb-4">Points</p>
+        <p class="text-sm text-gray-700 mb-4">Points</p>    
         <div>
             <button id="startGameBtn" class="text-black bg-blue-500 w-full py-2 rounded-full">Start Game</button>
         </div>
@@ -35,5 +44,8 @@ is_logged_in(true);
         <input type="submit" name="submit" value="save" id="sub"/> 
     </form>
 </body>-->
-<script src="./shooter.js"></script>
+<script type="text/javascript">
+     var logged = <?php echo json_encode($logged) ?>;
+</script>
+<script type="text/javascript" src="./shooter.js"></script>
  
