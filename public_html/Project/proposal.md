@@ -281,4 +281,406 @@ Milestone 3:
 
 Milestone 4:
 
-<table><tr><td>Milestone 4</td></tr><tr><td><table><tr><td>F1 - User can set their profile to be public or private (will need another column in Users table) ()</td></tr><tr><td>Status: pending</td></tr><tr><td>Links:</td></tr><tr><td>PRs:</td></tr><tr><td><table><tr><td>F1 - If public, hide email address from other users<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><table><tr><td>F2 - User will be able to see their competition history ()</td></tr><tr><td>Status: pending</td></tr><tr><td>Links:</td></tr><tr><td>PRs:</td></tr><tr><td><table><tr><td>F2 - Limit to 10 results<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F2 - Paginate anything after 10<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F2 - If no results, show the appropriate message<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><table><tr><td>F3 - User with the role of “admin” can edit a competition where paid_out = false ()</td></tr><tr><td>Status: pending</td></tr><tr><td>Links:</td></tr><tr><td>PRs:</td></tr><tr><td><table><tr><td>F3 - They can adjust any of the regular form values<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F3 - If the competition was expired they can update the duration to include extra time<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><table><tr><td>F4 - Add pagination to the Active Competitions view ()</td></tr><tr><td>Status: pending</td></tr><tr><td>Links:</td></tr><tr><td>PRs:</td></tr><tr><td><table><tr><td>F4 - Show 10 competitions per page<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F4 - Paginate anything after 10<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F4 - If no results, show the appropriate message<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><table><tr><td>F5 - Anywhere a username is displayed should be a link to that user’s profile ()</td></tr><tr><td>Status: pending</td></tr><tr><td>Links:</td></tr><tr><td>PRs:</td></tr><tr><td><table><tr><td>F5 - This includes all scoreboards<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F5 - If the profile is private you can have the page just display “this profile is private” upon access<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><table><tr><td>F6 - Viewing an active or expired competition should show the top 10 scoreboard related to that competition ()</td></tr><tr><td>Status: pending</td></tr><tr><td>Links:</td></tr><tr><td>PRs:</td></tr><tr><td><table><tr><td>F6 - item 1<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><table><tr><td>F7 - Game should be fully implemented/complete by this point ()</td></tr><tr><td>Status: pending</td></tr><tr><td>Links:</td></tr><tr><td>PRs:</td></tr><tr><td><table><tr><td>F7 - Game should tell the player if they’re not logged in that their score will not be recorded.<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><table><tr><td>F8 - User’s score history will include pagination ()</td></tr><tr><td>Status: pending</td></tr><tr><td>Links:</td></tr><tr><td>PRs:</td></tr><tr><td><table><tr><td>F8 - Show latest 10<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F8 - Paginate after 10<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F8 - Show appropriate message for no results<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><table><tr><td>F9 - Home page will have a weekly, monthly, and lifetime scoreboard ()</td></tr><tr><td>Status: pending</td></tr><tr><td>Links:</td></tr><tr><td>PRs:</td></tr><tr><td><table><tr><td>F9 - Will also have a link to the game<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr><tr><td><table><tr><td>F9 - Scoreboards will show username and points for the session<tr><td>Status: pending</td></tr><tr><td><img width="600px" src=""><p></td></tr></td></tr></table></td></tr></td></tr></table>
+
+<table>
+<tr><td>Milestone 4</td></tr><tr><td>
+<table>
+<tr><td>F1 - User can set their profile to be public or private (will need another column in Users table) ()</td></tr>
+<tr><td>Status: complete</td></tr>
+<tr><td>Links:<p>
+
+ [https://gm348-prod.herokuapp.com/Project/home.php](https://gm348-prod.herokuapp.com/Project/home.php)</p></td></tr>
+<tr><td>PRs:<p>
+
+ [https://github.com/G-McCarten/IT202-005/pull/85](https://github.com/G-McCarten/IT202-005/pull/85)</p></td></tr>
+<tr><td>
+<table>
+<tr><td>F1 - If public, hide email address from other users</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147296526-486a6db6-6631-46ef-8ba7-df5a94b02d23.png">
+<p>Users can mark their profile as public</p>
+</td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147296530-9f9d5672-72ae-4639-a2fa-d13ac6c9f33c.png">
+<p>Public profiles do not display email</p>
+</td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147296531-aebcba49-25a0-4707-8598-414a79aed610.png">
+<p>Public column added to users</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<table>
+<tr><td>F2 - User will be able to see their competition history ()</td></tr>
+<tr><td>Status: complete</td></tr>
+<tr><td>Links:<p>
+
+ [https://gm348-prod.herokuapp.com/Project/home.php](https://gm348-prod.herokuapp.com/Project/home.php)</p></td></tr>
+<tr><td>PRs:<p>
+
+ [https://github.com/G-McCarten/IT202-005/pull/86](https://github.com/G-McCarten/IT202-005/pull/86)</p></td></tr>
+<tr><td>
+<table>
+<tr><td>F2 - Limit to 10 results</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147296624-f5828611-50c5-42a5-a26e-bbe7ab69490f.png">
+<p>Past competitions displayed on home page</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F2 - Paginate anything after 10</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147296781-06c72752-cc29-4d79-a7d3-a32e24ef02e9.png">
+<p>Pagination variables for competition history</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F2 - If no results, show the appropriate message</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147296700-e112cf64-510d-42dc-b3d3-e1f5f2fa782e.png">
+<p>Informs user of no competions</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<table>
+<tr><td>F3 - User with the role of “admin” can edit a competition where paid_out = false ()</td></tr>
+<tr><td>Status: complete</td></tr>
+<tr><td>Links:<p>
+
+ [https://gm348-prod.herokuapp.com/Project/edit_competition.php?id=12](https://gm348-prod.herokuapp.com/Project/edit_competition.php?id=12)</p></td></tr>
+<tr><td>PRs:<p>
+
+ [https://github.com/G-McCarten/IT202-005/pull/86](https://github.com/G-McCarten/IT202-005/pull/86)</p></td></tr>
+<tr><td>
+<table>
+<tr><td>F3 - They can adjust any of the regular form values</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147296946-75c7f903-1b03-4f35-897f-54b67ae3df06.png">
+<p>Edit competition page</p>
+</td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147297100-9fce463e-1013-46a1-9d8b-df7914e09b08.png">
+<p>Snippet from view_competition.php, only allows admins to edit.</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F3 - If the competition was expired they can update the duration to include extra time</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147296948-d7db8068-00ae-4c9c-90c4-e083dff720f5.png">
+<p>Ability to edit duration</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<table>
+<tr><td>F4 - Add pagination to the Active Competitions view ()</td></tr>
+<tr><td>Status: complete</td></tr>
+<tr><td>Links:<p>
+
+ [https://gm348-prod.herokuapp.com/Project/competitions.php](https://gm348-prod.herokuapp.com/Project/competitions.php)</p></td></tr>
+<tr><td>PRs:<p>
+
+ [https://github.com/G-McCarten/IT202-005/pull/87](https://github.com/G-McCarten/IT202-005/pull/87)</p></td></tr>
+<tr><td>
+<table>
+<tr><td>F4 - Show 10 competitions per page</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147297246-96eadbbc-2ef1-43b1-82e3-47fbccd82ddd.png">
+<p>Displays active competitions with pagination</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F4 - Paginate anything after 10</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147297287-09bb5665-69a6-423a-bcc2-c11ed706c673.png">
+<p>Pagination variables, allows for 10 competitions per_page</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F4 - If no results, show the appropriate message</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147297289-ef77107d-f86f-4e8a-9442-3c4675c8b9e2.png">
+<p>Snippet from competitions.php, displays proper message when no active competitions</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<table>
+<tr><td>F5 - Anywhere a username is displayed should be a link to that user’s profile ()</td></tr>
+<tr><td>Status: complete</td></tr>
+<tr><td>Links:<p>
+
+ [https://gm348-prod.herokuapp.com/Project/home.php](https://gm348-prod.herokuapp.com/Project/home.php)</p></td></tr>
+<tr><td>PRs:<p>
+
+ [https://github.com/G-McCarten/IT202-005/pull/85](https://github.com/G-McCarten/IT202-005/pull/85)</p></td></tr>
+<tr><td>
+<table>
+<tr><td>F5 - This includes all scoreboards</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147297474-cf741493-2e8f-481a-837b-af9c21367204.png">
+<p>Clickable usernames through <a href> tags</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F5 - If the profile is private you can have the page just display “this profile is private” upon access</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147297505-c6465e5f-faf3-40af-957f-9ced0f827e66.png">
+<p>This user did not mark their profile as public</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<table>
+<tr><td>F6 - Viewing an active or expired competition should show the top 10 scoreboard related to that competition ()</td></tr>
+<tr><td>Status: complete</td></tr>
+<tr><td>Links:<p>
+
+ [https://gm348-prod.herokuapp.com/Project/view_competition.php?id=13](https://gm348-prod.herokuapp.com/Project/view_competition.php?id=13)</p></td></tr>
+<tr><td>PRs:<p>
+
+ [https://github.com/G-McCarten/IT202-005/pull/87](https://github.com/G-McCarten/IT202-005/pull/87)</p></td></tr>
+<tr><td>
+<table>
+<tr><td>F6 - item 1</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147297609-f31fd59b-1f14-431a-bb06-b20d6db42f5a.png">
+<p>This active competition's leader board is viewable</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<table>
+<tr><td>F7 - Game should be fully implemented/complete by this point ()</td></tr>
+<tr><td>Status: complete</td></tr>
+<tr><td>Links:<p>
+
+ [https://gm348-prod.herokuapp.com/Project/shooter.php](https://gm348-prod.herokuapp.com/Project/shooter.php)</p></td></tr>
+<tr><td>PRs:<p>
+
+ [https://github.com/G-McCarten/IT202-005/pull/88](https://github.com/G-McCarten/IT202-005/pull/88)</p></td></tr>
+<tr><td>
+<table>
+<tr><td>F7 - Game should tell the player if they’re not logged in that their score will not be recorded.</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147297690-b0c09494-e7d7-4e89-8e96-83a42738a330.png">
+<p>User is notified their score will not be recorded</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F7 - fully implemented</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147297791-a7d03cb9-452f-44c4-aeaa-a97668b1109e.png">
+<p>Players can move and shoot enemies for more score, passively gaining score as well</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<table>
+<tr><td>F8 - User’s score history will include pagination ()</td></tr>
+<tr><td>Status: complete</td></tr>
+<tr><td>Links:<p>
+
+ [https://gm348-prod.herokuapp.com/Project/home.php?start=1](https://gm348-prod.herokuapp.com/Project/home.php?start=1)</p></td></tr>
+<tr><td>PRs:<p>
+
+ [https://github.com/G-McCarten/IT202-005/pull/86](https://github.com/G-McCarten/IT202-005/pull/86)</p></td></tr>
+<tr><td>
+<table>
+<tr><td>F8 - Show latest 10</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147297976-96da1ba4-ec65-4aab-9af5-718780e6b125.png">
+<p>Last 10 scores displayed</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F8 - Paginate after 10</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147297976-96da1ba4-ec65-4aab-9af5-718780e6b125.png">
+<p>10 per page</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F8 - Show appropriate message for no results</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147298103-7b656b8f-eef5-48fd-8e61-2b461ce132d1.png">
+<p>No scores displayed</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<table>
+<tr><td>F9 - Home page will have a weekly, monthly, and lifetime scoreboard ()</td></tr>
+<tr><td>Status: complete</td></tr>
+<tr><td>Links:<p>
+
+ [https://gm348-prod.herokuapp.com/Project/home.php](https://gm348-prod.herokuapp.com/Project/home.php)</p></td></tr>
+<tr><td>PRs:<p>
+
+ [https://github.com/G-McCarten/IT202-005/pull/89](https://github.com/G-McCarten/IT202-005/pull/89)</p></td></tr>
+<tr><td>
+<table>
+<tr><td>F9 - Will also have a link to the game</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147298394-6936ab06-194d-4b9d-b8ce-6a993bd0bab5.png">
+<p>Home page includes nav bar which has link to games</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F9 - Scoreboards will show username and points for the session</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/76708068/147297474-cf741493-2e8f-481a-837b-af9c21367204.png">
+<p>Username and points displayed, as well as date the score was acquired</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr></td></tr></table>
