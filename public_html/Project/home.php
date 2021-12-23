@@ -31,7 +31,6 @@ $time_period = "week";
 $leaderboard = get_top_10("$time_period");
 ?>
 <head>
-    <title >Pagination</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 </head>
 <h2> Your scores </h2>

@@ -1,3 +1,4 @@
+
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
@@ -10,6 +11,9 @@ const modalEL= document.querySelector('#modalEL')
 const modalScoreEL= document.querySelector('#modalScoreEL')
 let score = 0
 let scoreToPoints = 0
+
+let projectiles = []
+console.log(logged)
 
 /*const player = {
 
@@ -85,12 +89,48 @@ class Enemy{
     }
 }
 
+class Projectile{
+    constructor(x,y,radius,color,velocity){
+        this.x = x
+        this.y = y
+        this.radius = radius
+        this.color = color
+        this.velocity = velocity
+    }
+
+    draw(){
+        c.beginPath()
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
+        c.fillStyle = this.color
+        c.fill()
+    }     
+
+    update(){
+        this.draw();
+        this.x = this.x + this.velocity.x
+        this.y = this.y + this.velocity.y
+    }
+}
+
+addEventListener('click', (event) => {
+    const angle = Math.atan2(event.clientY - player.y, event.clientX - player.x)
+    const velocity = {
+        x: Math.cos(angle) * 5,
+        y: Math.sin(angle) * 5
+    }    
+    projectiles.push(new Projectile(
+        player.x, player.y, 5, 'red', velocity
+    ))
+})
+
+ 
 let player = new Player(canvas.width/2, canvas.height/2, 15, 'blue')
 let enemies = []
 
 function init(){
     player = new Player(canvas.width/2, canvas.height/2, 15, 'blue')
     enemies = []
+    projectiles = []
     score = 0
 }
 
@@ -162,18 +202,34 @@ function playerBoundaryCheck(){
 function animate(){
     animationId = requestAnimationFrame(animate)
 
+    projectiles.forEach((projectile) => {
+        projectile.update();
+    })
+
     c.fillStyle = 'rgba(0,0,0,0.1)'
     c.fillRect(0, 0, canvas.width, canvas.height); //background
 
     player_loop()
 
-    enemies.forEach((enemy) => {
+    enemies.forEach((enemy, index) => {
         enemy.update()
 
+        projectiles.forEach((projectile, projIndex) => {
+            const projDist = Math.hypot(projectile.x - enemy.x, projectile.y - enemy.y)
+            if (projDist - enemy.radius - projectile.radius < 1){
+                setTimeout(() => {
+                    enemies.splice(index, 1)
+                    projectiles.splice(projIndex, 1)
+                }, 0)
+                score += 50
+                scoreEl.innerHTML = score
+            }
+        })
         const dist = Math.hypot(player.x - enemy.x, player.y - enemy.y)
         if (dist - enemy.radius - player.radius < 1){
             modalEL.style.display = "flex"
-            //send score to database
+            //send score to database if logged in 
+        if (logged){
             $.ajax({
                 url: "save_score.php",
                 type: "POST",
@@ -189,6 +245,7 @@ function animate(){
                     console.log("error");
                 }
             });
+        }
             modalScoreEL.innerHTML = score
             cancelAnimationFrame(animationId)
             clearInterval(points)
@@ -226,10 +283,7 @@ function spawnEnemies(){
            x = Math.random() * canvas.width
            y = Math.random() < 0.5 ? 0 - radius : canvas.height + radius
         }        
-        
-        
         const color = 'green'
-
         const angle = Math.atan2(
             player.y - y,
             player.x - x
@@ -277,64 +331,3 @@ addEventListener('keyup', (e) => {
 //function endGame(){
 //    test = setTimeout(function() {console.log("game over"); score=0; scoreEl.innerHTML = score }, 100)
 //}
-
-
-$(document).ready(function(){
-    $('#myForm').submit(function(){
-        //var data = $(this).serialize();
-        
-        var data = {
-            score: score
-        }
-        console.log(data)
-        $.ajax({
-            url: "save_score.php",
-            type: "POST",
-            data: data,
-            success: function( data )
-            {
-                alert( data );
-            },
-            error: function(){
-                alert('ERRO');
-            }
-        });
-        return false;
-    });
-});
-
-$(document).ready(function() {
-	$('#endGame').on('click', function() {
-        console.log("clicked");
-		$("#endGame").attr("disabled", "disabled");
-		var finalScore = score;
-        console.log(finalScore)
-        if(score!=""){
-			$.ajax({
-				url: "save_score.php",
-				type: "POST",
-				data: {
-					score: finalScore				
-				},
-				cache: false,
-				success: function(dataResult){
-					var dataResult = JSON.parse(dataResult);
-					if(dataResult.statusCode==200){
-						//$("#endGame").removeAttr("disabled");
-						//$('#fupForm').find('input:text').val('');
-						//$("#success").show();
-						//$('#success').html('Data added successfully !'); 			
-                        console.log("success");			
-					}
-					else if(dataResult.statusCode==201){
-					   alert("Error occured !");
-					}
-					
-				}
-			});
-		}
-		else{
-			alert('Please fill all the field !');
-		}
-	});
-});
