@@ -93,7 +93,7 @@ $created = $profile["created"];
 $points = get_Points();
 ?>
 <div class="pl-5 ml-5 inset-0 items-center justify-center">
-    <div class="bg-white max-w-md w-full p-6 text-center"> <p>Your points: <?php echo($points)?></p>
+    <div class="bg-white max-w-md w-full p-6 text-center ml-10"> <p>Your points: <?php echo($points)?></p>
 </div>
   
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -115,10 +115,6 @@ $points = get_Points();
                                     <h5>
                                         <?php echo $username ?>
                                     </h5>
-                                    <h6>
-                                        Web Developer and Designer
-                                    </h6>
-                                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
@@ -137,16 +133,6 @@ $points = get_Points();
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-work">
-                            <p>WORK LINK</p>
-                            <a href="">Website Link</a><br/>
-                            <a href="">Bootsnipp Profile</a><br/>
-                            <a href="">Bootply Profile</a>
-                            <p>SKILLS</p>
-                            <a href="">Web Designer</a><br/>
-                            <a href="">Web Developer</a><br/>
-                            <a href="">WordPress</a><br/>
-                            <a href="">WooCommerce</a><br/>
-                            <a href="">PHP, .Net</a><br/>
                         </div>
                     </div>
                     <div class="col-md-8">

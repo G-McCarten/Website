@@ -132,6 +132,9 @@ nav.fill ul li a:hover:after {
   clear: both;
 }
 
-
-
-
+.leaderboard {
+  width:500px;
+  margin:50px ;
+  float:right;
+  top:40px;
+}

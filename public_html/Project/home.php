@@ -2,10 +2,9 @@
 require(__DIR__ . "/../../partials/nav.php");
 require(__DIR__ . "/../../lib/score_functions.php");
 ?>
-<h1>Home</h1>
+
 <?php
 if (is_logged_in(true)) {
-    echo "Welcome home, " . get_username() . "<br><br>";
     //comment this out if you don't want to see the session variables
     //echo "<pre>" . var_export($_SESSION, true) . "</pre>";
 }
@@ -26,17 +25,14 @@ if(isset($_GET['start'])){
 
 $lastScores = get_last_scores($start, $per_page);
 $paginations = ceil($scoreTableSize / $per_page);
-
-$time_period = "week";
-$leaderboard = get_top_10("$time_period");
 ?>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 </head>
-<h2> Your scores </h2>
 <div class="container-fluid">
         <div class="table-responsive" style="width: 600px; border: 1px solid black; margin: 10px;">
             <table class="w3-table-all">
+            <caption>Your Scores</caption>
                 <thead class="table-info">
                  <th scope="col" class="bg-primary" >Score</th>
                  <th scope="col" class="bg-primary">Date</th>
@@ -71,32 +67,40 @@ $leaderboard = get_top_10("$time_period");
                 } 
             ?>
             </ul> 
-        </div>  
+        </div> 
+         
 </div>  
 
 <?php
+$time_period = "week";
+$leaderboard = get_top_10("$time_period");
 if (!empty($leaderboard[0])){
-    echo "<div class='w3-container'>";
-    echo "<h2>Leaderboard</h2>";
-    echo "<table class='table-auto w3-table-all'>
-        <tr>
-        <th>Username</th>
-        <th>Score</th>
-        <th>Date</th>
-        </tr>";
-    
-    foreach ($leaderboard as $row) {
-      echo "<tr>";
-      echo "<td><a href=\"view_profile.php?id=" . $row['user_id'] . "\">" .  $row['username'] . "</a></td>";
-      echo "<td>" . $row['score'] . "</td>";
-      echo "<td>" . $row['created'] . "</td>";
-      }
-    echo "</table>"; }
+    include 'leaderboard.php'; }
     else{
         echo "No " . $time_period . " scores to display";
     }
-    echo "</div>";
+    
+
+$time_period = "month";
+$leaderboard = get_top_10("$time_period");
+if (!empty($leaderboard[0])){
+    include 'leaderboard.php'; }
+    else{
+        echo "No " . $time_period . " scores to display";
+    }
+    
+
+
+$time_period = "lifetime";
+$leaderboard = get_top_10("$time_period");
+if (!empty($leaderboard[0])){
+    include 'leaderboard.php'; }
+    else{
+        echo "No " . $time_period . " scores to display";
+    }
+    
 ?> 
+ 
 <?php
 //ch = competition history 
 $ch_start = 0;  $ch_per_page = 10;
@@ -119,11 +123,12 @@ $ch_Size = get_competition_history($ch_start, $ch_per_page, (int)get_user_id(), 
 //$lastScores = get_last_scores($start, $per_page);
 $ch_paginations = ceil($ch_Size / $ch_per_page);?>
 
-<h2> Your Past Competitions </h2>
+
 <body style="color:red;">
-<div class="container-fluid">
+<div class="container-fluid mt-5" style="margin-top:auto;">
 <div class="table-responsive" style="width: 600px; border: 1px solid black; margin: 10px;">
         <table class="w3-table-all">
+        <caption>Your Past Competitions</caption>
                 <thead class="table-info">
                  <th scope="col" class="bg-primary" >Title</th>
                  <th scope="col" class="bg-primary">Expired</th>
