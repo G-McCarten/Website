@@ -1,0 +1,2 @@
+ALTER TABLE Competitions ALTER expires TIMESTAMP DEFAULT 
+(DATE_ADD(CURRENT_TIMESTAMP, INTERVAL duration DAY)) on update (DATE_ADD(created, INTERVAL duration DAY));

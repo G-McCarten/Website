@@ -7,6 +7,7 @@ function get_last_scores($start, $per_page){
     $db = getDB();
     $query = "Select score, created from Scores WHERE user_id = :id ORDER BY created desc LIMIT $start, $per_page";
     $stmt = $db->prepare($query);
+    $results = [];
     try {
         $stmt->execute([":id" => $user_id]);
         $r = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -20,8 +21,8 @@ function get_last_scores($start, $per_page){
 
 }
 
-function get_scoreTableSize(){
-    $user_id = $_SESSION['user']['id'];
+//Gets count of rows from a table with a specefied userid
+function get_ScoreRowCount($user_id){
     $db = getDB();
     $query = "Select * FROM Scores WHERE user_id = :id" ;
     $stmt = $db->prepare($query);
