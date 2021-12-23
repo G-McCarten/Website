@@ -21,7 +21,8 @@ if (isset($_GET['id'])){
 }
 //get compeition
 $competition = getCompetition($comp_id); 
-//var_dump($competition);
+
+$top_scores = get_top_scores_comp($comp_id, 10);
 ?>
 
 <div class="container-fluid">
@@ -69,3 +70,28 @@ $competition = getCompetition($comp_id);
         </tbody>
     </table>
 </div>
+
+<?php
+if (!empty($top_scores[0])){
+    echo "<div class='w3-container'>";
+    echo "<h2>Leaderboard</h2>";
+    echo "<table class='table-auto w3-table-all'>
+        <tr>
+        <th>Username</th>
+        <th>Score</th>
+        <th>Date</th>
+        </tr>";
+    
+    foreach ($top_scores as $row) {
+      $username = get_usernameFromId($row['user_id']);
+      echo "<tr>";
+      echo "<td><a href=\"view_profile.php?id=" . $row['user_id'] . "\">" .  $username . "</a></td>";
+      echo "<td>" . $row['score'] . "</td>";
+      echo "<td>" . $row['created'] . "</td>";
+      }
+    echo "</table>"; }
+    else{
+        echo "<h2>No top scores to display</h2>";
+    }
+    echo "</div>";
+?> 

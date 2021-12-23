@@ -1,9 +1,22 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 <?php
 require_once(__DIR__ . "/../../partials/nav.php");
 is_logged_in(true);
 ?>
 
 <?php
+$start = 0;  $per_page = 10;
+$page_counter = 0;
+$next = $page_counter + 1;
+$previous = $page_counter - 1;
+
+if(isset($_GET['start'])){
+    $start = $_GET['start'];
+    $page_counter =  $_GET['start'];
+    $start = $start *  $per_page;
+    $next = $page_counter + 1;
+    $previous = $page_counter - 1;
+   }
 
 if (isset($_POST["join"])) {
     $user_id = get_user_id();
@@ -16,26 +29,11 @@ if (isset($_POST["join"])) {
 else{ flash("Not enough points"); }
 }
 
-//get activ compeitions
-$db = getDB();
-$stmt = $db->prepare("SELECT Competitions.id, title, min_participants, current_participants, current_reward, expires, 
-creator_id, min_score, join_cost, IF(competition_id is null, 0, 1) as joined,  CONCAT(first_place_per,'% - ', second_place_per, 
-'% - ', third_place_per, '%') as place FROM Competitions LEFT JOIN (SELECT * FROM UserComps WHERE user_id = :uid) as uc 
-ON uc.competition_id = Competitions.id WHERE expires > current_timestamp() AND did_payout < 1 AND did_calc < 1 ORDER BY expires desc");
+$competitions = get_ActiveCompetitions($start, $per_page, false);
+$comp_Size = get_ActiveCompetitions($start, $per_page, true);
+//$lastScores = get_last_scores($start, $per_page);
+$paginations = ceil($comp_Size / $per_page);?>
 
-$results = [];
-try {
-    $stmt->execute([":uid" => get_user_id()]);
-    $r = $stmt->fetchAll();
-    if ($r) {
-        $results = $r;
-    }
-} catch (PDOException $e) {
-    flash("There was a problem fetching competitions, please try again later", "danger");
-    error_log("List competitions error: " . var_export($e, true));
-}
-
-?>
 <div class="container-fluid">
 <h3 display="inline">Active Competitions</h3>
 <h3 class="ml-20" display="inline"><a href="<?php echo get_url('create_competition.php'); ?>">Create Competition</a></h3>
@@ -49,8 +47,8 @@ try {
             <th>Actions</th>
         </thead>
         <tbody>
-            <?php if (count($results) > 0) : ?>
-                <?php foreach ($results as $row) : ?>
+            <?php if (count($competitions) > 0) : ?>
+                <?php foreach ($competitions as $row) : ?>
                     <tr>
                         <td><?php se($row, "title"); ?></td>
                         <td><?php se($row, "current_participants"); ?>/<?php se($row, "min_participants"); ?></td>
@@ -78,5 +76,25 @@ try {
             <?php endif; ?>
         </tbody>
     </table>
+    <ul class="pagination">
+            <?php
+                if($page_counter == 0){
+                    echo "<li><a href=?start='0' class='active'>0</a></li>";
+                    for($j=1; $j < $paginations; $j++) { 
+                      echo "<li><a href=?start=$j>".$j."</a></li>";
+                   }
+                }else{
+                    echo "<li><a href=?start=$previous>Previous</a></li>"; 
+                    for($j=0; $j < $paginations; $j++) {
+                     if($j == $page_counter) {
+                        echo "<li><a href=?start=$j class='active'>".$j."</a></li>";
+                     }else{
+                        echo "<li><a href=?start=$j>".$j."</a></li>";
+                     } 
+                  }if($j != $page_counter+1)
+                    echo "<li><a href=?start=$next>Next</a></li>"; 
+                } 
+            ?>
+            </ul> 
 </div>
 
