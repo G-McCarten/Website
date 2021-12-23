@@ -63,6 +63,25 @@ function get_username()
     }
     return "";
 }
+
+function get_usernameFromId($user_id)
+{
+    $db = getDB();
+    $query = "Select username from Users WHERE id = :id";
+    $stmt = $db->prepare($query);
+    try {
+        $stmt->execute([":id" => $user_id]);
+        $r = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        if ($r) {
+            $results = $r;
+        }
+    } catch (PDOException $e) {
+        error_log("Error fetching username for $db: " . var_export($e->errorInfo, true));
+    }
+    return $results[0]['username'];
+}
+
+
 function get_user_email()
 {
     if (is_logged_in()) { //we need to check for login first because "user" key may not exist
@@ -77,6 +96,7 @@ function get_user_id()
     }
     return false;
 }
+
 //TODO 4: Flash Message Helpers
 function flash($msg = "", $color = "info")
 {
@@ -166,7 +186,7 @@ function get_competition_history($start, $per_page, $user_id, $justCount){
     $query = "SELECT Competitions.id, title, min_participants, current_participants, current_reward, expires, 
     creator_id, min_score, join_cost, IF(competition_id is null, 0, 1) as joined,  CONCAT(first_place_per,'% - ', second_place_per, 
     '% - ', third_place_per, '%') as place FROM Competitions RIGHT JOIN (SELECT * FROM UserComps WHERE user_id = :uid) as uc 
-    ON uc.competition_id = Competitions.id WHERE expires < current_timestamp() AND did_payout > 0 AND did_calc > 0 ORDER BY expires desc ";
+    ON uc.competition_id = Competitions.id WHERE expires < current_timestamp() ORDER BY expires desc ";
 
     if(!$justCount){ $query .= "LIMIT $start, $per_page"; } 
     $stmt = $db->prepare($query);
@@ -202,6 +222,33 @@ function getCompetition($comp_id){
         }
     } catch (PDOException $e) {
         flash("There was a problem fetching competition, please try again later", "danger");
+        error_log("List competitions error: " . var_export($e, true));
+    }
+    return $results;
+}
+
+function get_ActiveCompetitions($start, $per_page, $justCount){
+    //get activ compeitions
+    $db = getDB();
+    $query = "SELECT Competitions.id, title, min_participants, current_participants, current_reward, expires, 
+    creator_id, min_score, join_cost, IF(competition_id is null, 0, 1) as joined,  CONCAT(first_place_per,'% - ', second_place_per, 
+    '% - ', third_place_per, '%') as place FROM Competitions LEFT JOIN (SELECT * FROM UserComps WHERE user_id = :uid) as uc 
+    ON uc.competition_id = Competitions.id WHERE expires > current_timestamp() AND did_payout < 1 AND did_calc < 1 ORDER BY expires desc ";
+    if(!$justCount){ $query .= "LIMIT $start, $per_page"; } 
+    $stmt = $db->prepare($query);
+    $results = [];
+    try {
+        $stmt->execute([":uid" => $_SESSION['user']['id']]);
+        $r = $stmt->fetchAll();
+        if($justCount){
+            $count = $stmt->rowCount();
+            return $count;
+        }
+        if ($r) {
+            $results = $r;
+        }
+    } catch (PDOException $e) {
+        flash("There was a problem fetching competitions, please try again later", "danger");
         error_log("List competitions error: " . var_export($e, true));
     }
     return $results;
@@ -279,7 +326,7 @@ function calc_winners(){
                 $tpr = ceil($reward * $tp);
                 $comp_id = se($row, "id", -1, false);
                
-                $r = get_top_scores_comp($comp_id);
+                $r = get_top_scores_comp($comp_id, 3);
                 if ($r) {
                     $atleastOne = false;
                     foreach ($r as $index => $row) {
@@ -347,10 +394,14 @@ function calc_winners(){
 }
   
 
-function get_top_scores_comp($comp_id){
+function get_top_scores_comp($comp_id, $amount){
     $db = getDB();
-    $query = "SELECT DISTINCT score, Scores.user_id FROM Scores JOIN UserComps ON UserComps.competition_id = :comp_id 
-    WHERE Scores.created > UserComps.created ORDER by score desc LIMIT 3";
+    //$query = "SELECT DISTINCT score, Scores.user_id, Scores.created FROM Scores JOIN UserComps ON UserComps.user_id = Scores.user_id 
+    //WHERE Scores.created > UserComps.created AND competition_id = :comp_id ORDER by score desc LIMIT $amount";
+    $query = "Select DISTINCT Users.username, score, Competitions.id, Scores.user_id, Scores.created  FROM Competitions JOIN UserComps on
+    UserComps.competition_id = Competitions.id JOIN Scores on Scores.user_id = UserComps.user_id JOIN Users on 
+    Users.id = Scores.user_id WHERE Competitions.id = :comp_id AND Scores.user_id = UserComps.user_id AND Scores.created > UserComps.created
+    AND Scores.created < Competitions.expires ORDER BY score desc LIMIT $amount";
     $stmt = $db->prepare($query);
     $results=[];
     try {

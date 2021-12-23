@@ -2,8 +2,7 @@
 require_once(__DIR__ . "/../../partials/nav.php");
 is_logged_in(true);
 ?>
-<?php
-var_dump($_SESSION['user']['roles']);
+<?php   
 if (isset($_POST["save"])) {
     $email = se($_POST, "email", null, false);
     $username = se($_POST, "username", null, false);
