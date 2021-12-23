@@ -1,16 +1,25 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
 ?>
+<div class="form-box login">
+<h2>Login</h2> 
 <form onsubmit="return validate(this)" method="POST">
-    <div>
-        <label for="email">Username/Email</label>
+    <div class="input-box">
         <input type="text" name="email" required />
+        <label for="email">Username/Email</label>
     </div>
-    <div>
-        <label for="pw">Password</label>
+    <div class="input-box"> 
         <input type="password" id="pw" name="password" required minlength="8" />
+        <label for="pw">Password</label>
     </div>
-    <input type="submit" value="Login" />
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <input type="submit" value="Login" />
+    </a>
+</div>
 </form>
 <script>
     function validate(form) {
@@ -57,7 +66,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     if (!$hasError) {
         //TODO 4
         $db = getDB();
-        $stmt = $db->prepare("SELECT id, email, username, password from Users where email = :email OR username = :email");
+        $stmt = $db->prepare("SELECT id, email, username, points, password from Users where email = :email OR username = :email");
         try {
             $r = $stmt->execute([":email" => $email]);
             if ($r) {
@@ -80,6 +89,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
                         } else {
                             $_SESSION["user"]["roles"] = []; //no roles
                         }
+                        calc_winners();
                         die(header("Location: home.php"));
                     } else {
                         flash("Invalid password", "danger");
