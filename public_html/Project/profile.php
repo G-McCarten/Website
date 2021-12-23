@@ -3,6 +3,7 @@ require_once(__DIR__ . "/../../partials/nav.php");
 is_logged_in(true);
 ?>
 <?php
+var_dump($_SESSION['user']['roles']);
 if (isset($_POST["save"])) {
     $email = se($_POST, "email", null, false);
     $username = se($_POST, "username", null, false);
@@ -129,6 +130,7 @@ $points = get_Points();
                             </ul>
                         </div>
                     </div>
+                    
                     <!--<div class="col-md-2">
                         <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
                     </div>-->

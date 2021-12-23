@@ -161,6 +161,51 @@ function get_profile($user_id){
     return false;
 }
 
+function get_competition_history($start, $per_page, $user_id, $justCount){
+    $db = getDB();
+    $query = "SELECT Competitions.id, title, min_participants, current_participants, current_reward, expires, 
+    creator_id, min_score, join_cost, IF(competition_id is null, 0, 1) as joined,  CONCAT(first_place_per,'% - ', second_place_per, 
+    '% - ', third_place_per, '%') as place FROM Competitions RIGHT JOIN (SELECT * FROM UserComps WHERE user_id = :uid) as uc 
+    ON uc.competition_id = Competitions.id WHERE expires < current_timestamp() AND did_payout > 0 AND did_calc > 0 ORDER BY expires desc ";
+
+    if(!$justCount){ $query .= "LIMIT $start, $per_page"; } 
+    $stmt = $db->prepare($query);
+    $results = [];
+    try {
+        $stmt->execute([":uid" => $user_id]);
+        $r = $stmt->fetchAll();
+        if($justCount){
+            $count = $stmt->rowCount();
+            return $count;
+        }
+        if ($r) {
+            $results = $r;
+        }
+    } catch (PDOException $e) {
+        flash("There was a problem fetching competitions, please try again later", "danger");
+        error_log("List competitions error: " . var_export($e, true));
+    }
+    return $results;
+}
+
+function getCompetition($comp_id){
+    $db = getDB();
+    $stmt = $db->prepare("SELECT *, CONCAT(first_place_per,'% - ', second_place_per, 
+    '% - ', third_place_per, '%') as place FROM Competitions WHERE id=$comp_id ");
+
+    $results = [];
+    try {
+        $stmt->execute();
+        $r = $stmt->fetchAll();
+        if ($r) {
+            $results = $r;
+        }
+    } catch (PDOException $e) {
+        flash("There was a problem fetching competition, please try again later", "danger");
+        error_log("List competitions error: " . var_export($e, true));
+    }
+    return $results;
+}
 
 function update_points($user_id){
     $db = getDB();
